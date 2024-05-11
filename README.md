@@ -1,9 +1,40 @@
 # Assignment 1
+## Description
+This module provides functionalities for managing a music library and playlists efficiently. It allows users to add, update, delete music entries, search for music by genre, and manage playlists seamlessly.
 
-You will only need one file, ie, your node module, for this assignment.
+## How to Use?
+- Clone the repository to your own directory
+<!-- * Install the node.js to use the module for your project
+```
+npm install vanessa_music.js
+``` -->
++ You may want to create another js file to test the code:
+```
+const music = require("./music.js");
 
-In this readme file, describe how to use your node module. It could be similar to **app.js** from Lab2, where you call some functions in your node module and display the output. Describe how to setup your node module, if any. Describe how to call the functions, what parameters required and so on.
+music.displayMusicLists();
+// Adding a new music
+music.addMusic('小幸運','Hebe Tien','CPoP','C01');
+// Displaying the updated music lists
+music.displayMusicLists();
+// Adding music from the library to the playlist
+music.addMusicPlaylist('The Greatest SnowMan','EL2');
+music.displayMusicLists();
+// Deleting music from the playlist
+music.deleteMusicPlaylist('EL2');
+music.displayMusicLists();
+// Searching for music by genre
+music.searchMusicByGenre("Pop");
+// Updating music in the library
+music.updateMusic('C01','小幸運','Hebe Tien','CPOP');
+music.displayMusicLists();
+```
 
-You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live preview of the readme file.
-
-For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+## Explanation of the Functions:
+- addMusic() : Able to add music to the library 
+- addMusicPlaylist() : Add music in the library to the playlist
+- deleteMusicPlaylist() : Delete the specific music from the playlist (using code to check then proceed to delete the music the user specify)
+- updateMusic() : Update the music library if the music is found in the library (using code to check wether the music is stored in the library list)
+- displayMusicLists() : Display the updated library and playlist list 
+- searchMusicByGenre() 
+    - displayMusicGerneList() : Search and display the music that belong to that genre from the library list.
