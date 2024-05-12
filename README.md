@@ -10,7 +10,7 @@ npm install vanessa_music.js
 ``` -->
 + You may want to create another js file to test the code:
 ```
-const music = require("./music.js");
+const music = require("vanessa_music.js");
 
 music.displayMusicLists();
 // Adding a new music
